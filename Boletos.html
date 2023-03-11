@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos</title>
+</head>
+<body> 
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+		#creed-img {	     
+            float: left;
+			margin-right: 30px; 
+		}
+	</style>
+        <h1><center>Cinépolis</center></h1>
+        <div align="center" href="Boletos.html"><img src="Cinepolis.jpg" width="20%" ></div>
+        <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Boletos</legend>
+            <table align="left">
+                <tr>
+                    <td width="50%">
+                        <h3><label for="cine">Elige el cine de tu preferencia:</label></br></h3>
+                            <select id="cine" >
+                               <option value="" disabled selected>selecciona un cine</option>
+                                <option value="Cinepalaza">Cinepolis plaza san luis</option> 
+                                <option value="Cinedorado">Cinepolis El dorado</option>
+                                <option value="Cinecitadina">Cinepolis Citadina</option>
+                                <option value="Cinemacro">Cinepolis Macroplaza</option>
+                                <option value="Cinesendero">Cinepolis Sendero</option>
+                                <option value="Cinetangamanga">Cinepolis Tangamanga</option>                             
+                            </select>
+                    </td>   
+                </tr>
+
+                <td>
+                </br>
+                    <h3><label for="Horario">Horario:</label><br></h3>
+                     <input type="datetime-local" name="fechaes" id="fechaes">
+                </td>            
+                <tr>
+                </br>
+                    <td width="50%">
+                    </br>
+                    <h3> <label for="idioma">Idioma:</label></br></h3>
+                        <input type="radio" name="idioma" id="idioma">
+                        <label for="spanish">Español</label><br>
+                        <input type="radio" name="idioma" id="idioma">
+                        <label for="idioma">Ingles</label><br>
+                        <input type="radio" name="idioma" id="idioma">
+                        <label for="idioma">Ingles con subtitulos</label><br>
+                    </td>
+                <tr>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Tipo de formato:</h3>
+                        <input type="checkbox" name="2D" id="2D" checked>
+                        <label for="">2D</label><br>
+                            
+                        <input type="checkbox" name="3D" id="3D" checked>
+                        <label for="">3D</label><br>
+                        
+                        <input type="checkbox" name="4DX" id="4DX" checked>
+                        <label for="">4DX</label><br>
+                    
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br/>
+                        <h3> <label for="cantidad">Cantidad de boletos: </label><br/></h3>
+                        <input type="checkbox" name="uno" id="uno" checked>
+                        <label for="">1</label><br>
+                            
+                        <input type="checkbox" name="dos" id="dos" checked>
+                        <label for="">2</label><br>
+                        
+                        <input type="checkbox" name="tres" id="tres" checked>
+                        <label for="">3</label><br>
+                            
+                        <input type="checkbox" name="cuatro" id="cuatro" checked>
+                        <label for="">4</label><br>
+                        
+                        <input type="checkbox" name="cinco" id="cinco" checked>
+                        <label for="">5</label><br>
+
+                        <input type="checkbox" name="6" id="6" checked>
+                        <label for="">6</label><br>
+                            
+                    </td>
+                </tr>
+                
+            </table>
+            <div align="left" width="30%">
+
+                <h2>Ant-Man and The Wasp: Quantumania</h2> 
+                <img  id="ant"src="Ant.jpg" width="15%">  
+                <h4>Sipnosis:</h4>
+                <p>Los superhéroes Scott y Cassie Lang, Hope van Dyne y sus padres, se encuentran accidentalmente atrapados en el reino cuántico y deben enfrentarse a un nuevo enemigo, Kang el Conquistador.</p>
+                <p>Director: Peyton Reed <br/>
+                    Recaudación: $455 170 133 <br/>
+                    Guion: Jeff Loveness <br/>
+                    Año: 2023 <br/>
+                    Basada en: Ant-Man; de Stan Lee, Larry Lieber y Jack Kirby; The Wasp; de Stan Lee y Jack Kirby</p>
+        </div>
+        </fieldset>
+        <fieldset>
+            
+            <legend>Proceso de Pago</legend>
+            <table >
+                <tr>
+                    <td width="60%">
+                        <br/>
+                        <h3><label for="nombre">Nombre: </label> <br/></h3>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <br/>
+                        <br/>
+                        <h3><label for="Apellido paterno">Apellido paterno: </label> <br/></h3>
+                        <input type="text" id="Apellido paterno " name="Apellido paterno" placeholder="Apellido paterno">
+                        <br/>
+                        <br/>
+                        <h3><label for="Apeliido materno">Apellido materno: </label> <br/></h3>
+                        <input type="text" id="Apellido materno" name="Apeliido materno" placeholder="Apeliido materno">
+                        
+                    </td>
+
+                    <td width="60%"> 
+                        <h2>Tipo de tarjeta</h2>
+                        <input type="checkbox" name="MasterCard" id="MasterCard" >
+                        <label for="">MasterCard</label><br>
+                            
+                        <input type="checkbox" name="VISA" id="VISA" >
+                        <label for="">VISA</label><br>
+                        
+                        <input type="checkbox" name="AMEX" id="AMEX" >
+                        <label for="">AMEX</label><br>
+                    
+                        <h3><label for="contraseña">Numero de tarjeta: </label></h3>
+                        <input type="password" name="contraseña" id="contraseña" placeholder="1234-1234-1234-1234" required>
+                        
+                        <br/>
+                        <h3><label for="Fecha de vencimiento">Fecha de vencimiento: </label></h3>
+                        <input type="password" name="Fecha de vencimiento" id="Fecha de vencimiento" placeholder="01-12" required>
+
+                       <br/>
+                        
+                    </td>
+                    <td width="50%">
+
+                        <h3><label for="CVV">CVV: </label></h3>
+                        <input type="password" name="CVV" id="CVV" placeholder="123" required>
+
+            
+                       <h3><label for="Telefono">Numero de telefono:</label></h3>
+                        <input type="" name="Telefono" id="Telefono" placeholder="4444-556-789"/><br/>
+                        <h3><label for="correo">Correo electronico:</label></h3>
+                        <input type="" name="correo" id="correo" placeholder="@example.com"/><br/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+       
+    </form>
+
+</body>
+</html>
