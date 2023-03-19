@@ -1,0 +1,9 @@
+body{
+    background-color:rgb(70, 68, 68);
+}
+h1{
+    color: rgba(245, 240, 240, 0.877);
+}
+h2,h3,h4,label,legend{
+    color: rgba(251, 255, 255, 0.938);
+}
