@@ -1,0 +1,82 @@
+*{
+  padding-right: 0;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+      font-family: 'Dongle', sans-serif;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: 'Tilt Prism', cursive;
+  background-image:  url(cabañas2.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.menu-bar {
+  background-color: rgb(28, 85, 28);
+  height: 80px;
+  width: 230px;
+  display: flex;
+  align-items: center;
+  position: relative;   
+}
+ .menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+.menu-bar ul li {
+   width: 230px; 
+  padding: 10px 30px;
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-menu {
+  display: none;
+}
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  
+  z-index: 1;
+  left: 0;
+  top: 100%;
+  background-color: rgb(28, 85, 28) ;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+  z-index: -1;
+  background: none;
+  width: 210px;
+}
+
+.dropdown-menu li:hover{
+  background-color: rgb(39, 209, 39);
+  width: 220px;
+}
+.titulo{
+  font-family: 'Times New Roman', Times, serif;
+  left: 70%;
+  width: 250px;
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
