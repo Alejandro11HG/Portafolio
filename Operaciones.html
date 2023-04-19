@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo</title>
+    <link rel="stylesheet", href="">
+    <style>
+        .box{
+            background-color: aqua;
+            display: flex;
+            margin-left: 35%;
+            margin: 30px;
+            justify-content: center;
+            width: 300px;
+        height: 50px;
+        text-align: center;
+        }
+    </style>
+    <script src="Operaciones.js" ></script>
+</head>
+<body>
+
+<div>
+    <form method="post" enctype="text/plain">
+    <input class="box" type="button" name="Sumar"
+    value="Sumar" onclick="suma()"/>
+
+    <input class="box"  type="button" name="Restar"
+    value="Restar" onclick="resta()"/>
+
+    <input class="box"  type="button" name="Multiplicar"
+    value="Multiplicar" onclick="multiplica()"/>
+
+    <input class="box"  type="button" name="Dividir"
+    value="Dividir" onclick="divide()"/>
+
+    <input class="box" type="button" name="¿Es positivo o negativo?"
+    value="¿Es positivo o negativo?" onclick="positivo()"/>
+
+    </form>
+</div>
+
+
+</body>
+</html>
