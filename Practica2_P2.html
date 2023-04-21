@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica_2_P2</title>
+    <script>
+
+function suma()
+{
+    var num1,num2,suma;
+    num1=parseInt(document.getElementById("num1").value);
+    num2=parseInt(document.getElementById("num2").value);
+    suma=num1+num2;
+    document.getElementById("resp").innerHTML = suma;
+}
+
+function resta()
+{
+    var num1,num2,resta;
+    num1=parseInt(document.getElementById("num1").value);
+    num2=parseInt(document.getElementById("num2").value);
+    resta=num1-num2;
+    document.getElementById("resp").innerHTML = resta;
+}
+
+function Multiplica ()
+{
+    var num1,num2,Multiplica;
+    num1=parseInt(document.getElementById("num1").value);
+    num2=parseInt(document.getElementById("num2").value);
+    Multiplica=num1*num2;
+    document.getElementById("resp").innerHTML = Multiplica;
+}
+
+function divide ()
+{
+    var num1,num2,divide;
+    num1=parseInt(document.getElementById("num1").value);
+    num2=parseInt(document.getElementById("num2").value);
+    divide=num1/num2;
+    document.getElementById("resp").innerHTML = divide;
+}
+    </script>
+</head>
+<body>
+    <h2>Operaciones matematicas</h2>
+    <form method="post" enctype="text/plain">
+        <p>Escribe un numero</p>
+        <input type="text" name="numero1" id="num1"/>
+        <p>Escribe un numero</p>
+        <input type="text" name="numero2" id="num2"/>
+    </form>
+    <br> <button onclick="suma()">Sumar</button>
+    <button onclick="resta()">Restar</button>
+    <button onclick="Multiplica()">Multiplicar</button>
+    <button onclick="divide()">Dividir</button>
+    <p>El resultado es:</p>
+    <p id="resp">0</p>
+</body>
+</html> <br>
