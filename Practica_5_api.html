@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    </head>
+    <body>
+    <h2>Ejemplo API history </h2>
+    <button onclick="Back1()"> Back</button>
+    <script>
+    function Back1() {
+    window.history.back();
+    }
+    </script>
+    <br>
+    <br>
+    <h2>Ejemplo funcion go</h2>
+    <button onclick="FuncionGo()">Funcion go</button>
+    <script>
+    function funcionGo() {
+    window.history.go(-2);
+    }
+    </script>
+    <br>
+    <br>
+    <h2>Ejemplo forward</h2>
+    <button onclick="Forward1()">Forward</button>
+    <script>
+    function Forward1() {
+    window.history.forward();
+    }
+    </script>
+    <br>
+    <br>
+    <h3>URLS en el historial</h3>
+    <p id="demo"></p>
+    <script>
+    let length = window.history.length;
+    document.getElementById("demo").innerHTML = length;
+    </script>
