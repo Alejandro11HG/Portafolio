@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Geolocation API</title>
+    <link rel="stylesheet" type="text/css" href="Practica_6.css">
+</head>
+<body>
+    <div >
+        <h1 class="cuadro">JavaScript Geolocation API</h1>
+    </div>
+    
+    <div class="caja">
+        <h2>Que es una Geolocation API</h2>
+        <p>es una interfaz de programación de aplicaciones (API) que permite a los navegadores web obtener la ubicación geográfica del usuario, utilizando diversas fuentes de datos, como la dirección IP del dispositivo, la información de redes WiFi cercanas y los datos de GPS de los dispositivos móviles.</p>
+        <h2>¿Cómo se obtiene esta informacion?</h2>
+        <p>La información de ubicación obtenida a través de la Geolocation API puede proporcionar una experiencia de usuario más personalizada y relevante, permitiendo a las aplicaciones web adaptar su contenido y funcionalidad en función de la ubicación del usuario. Sin embargo, es importante destacar que el acceso a la información de ubicación del usuario debe ser manejado con cuidado y respeto a la privacidad del usuario.</p>
+        <h2>Importancia de la Geolocation API</h2>
+        <p>La Geolocation API es importante porque permite a las aplicaciones web obtener información precisa sobre la ubicación geográfica del usuario, lo que puede mejorar significativamente la experiencia del usuario y permitir una amplia variedad de aplicaciones basadas en la ubicación.</p>
+        <h2> Algunos Ejemplos</h2>
+        <ul>
+            <li>
+                Servicios de mapas: la API permite a las aplicaciones web mostrar mapas y direcciones personalizadas basadas en la ubicación actual del usuario.
+            </li>
+            <li>
+                Servicios de localización: la API permite a las aplicaciones web proporcionar información sobre lugares cercanos, como restaurantes, tiendas y servicios públicos.
+            </li>
+            <li>
+                Seguridad y seguimiento: la API puede utilizarse para proporcionar seguridad y seguimiento de dispositivos perdidos o robados.
+            </li>
+        </ul>
+        <h2>Ejemplo Aplicado en la pagina</h2>
+
+        <button onclick="getLocation()" class="position">Posicion Actual</button>
+        
+        <p id="demo" class="resultado"></p>
+        
+        <script>
+        const x = document.getElementById("demo");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          x.innerHTML = "Latitud: " + position.coords.latitude + 
+          "<br>Longitud: " + position.coords.longitude;
+        }
+        </script>
+        
+</body>
+</html>
