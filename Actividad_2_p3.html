@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener totales del formulario</title><!-- Titulo de pagina -->
+    <link rel="stylesheet" href="Actividad_2.css"> <!-- href indica el css, o sea el estilo de cada elemento --> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+</head>
+<!-- se abre la etiqueda scrip para inciar para las funciones -->
+<script>
+var total; 
+function califica()
+    {var total=0;
+        
+        for (var x=1;x<=5;x++)
+        {
+        
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+            document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+            if(total==15)
+            document.getElementById("comentario").innerHTML="Regular!!";
+        else
+            if(total<=15)
+            document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+</script>
+<!--  se crean diferentes variables con var y dependiendo cada respuesta se suman con el ciclo for ,al precionar el boton califica se hacen dichas funciones dentro del script como por ejemplo la suma de dichos puntos
+y se abren diferentes if para dependiendo dichos puntos se imprima un comentario diferente en pantalla -->
+<!-- se cierran las funciones -->
+
+<body>
+    <div id="contiene"><!-- se le asigna un id  --> 
+    <h1>Responde correctamente</h1> <!-- titulos -->
+    <h2>Tema: HTML</h2>
+<form>
+<div>
+   
+    <ul><!-- viñetas -->
+        <li  class="preg"   >Pregunta 1</li><!-- dentro de una viñeta con la etiqueta li, se agrega el class para agrega css, se agrega  -->
+        <h3 class="preg2">¿Qué significa HTML?</h3><!-- dentro de el titulo que se agrega con h3, se agrega estilo css con class dandole un nombre para identificarlo -->
+        <input type="radio" name="r1" id="r1" value="0"/>Lenguaje de material de hiperweb<br/><!-- se agrega el tipo, nombre, id y cuantos puntos vale cada respuesta, y se agregan enc ada respuesta -->
+        <input type="radio" name="r1" id="r1" value="0"/>History Totaly MyWeb Lenguage<br/>
+        <input type="radio" name="r1" id="r1" value="5"/>HyperText Markup Language<br/>
+        <input type="radio" name="r1" id="r1" value="0"/>List Mist Text Hi<br/>
+       
+        <br>
+        <li class="preg" >Pregunta 2</li>
+        <h3 class="preg2" >¿Cuál es la extensión con la que se debe guardar el archivo de página web?</h3>
+        <input type="radio" name="r2" id="r2" value="0"/>.hmlt<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>.mlth<br/>
+        <input type="radio" name="r2" id="r2" value="5"/>.html<br/>
+        <input type="radio" name="r2" id="r2" value="0"/>.htlm<br/>
+
+        <br><!-- Salto de linea -->
+        <li class="preg" >Pregunta 3</li>
+        <h3 class="preg2" >¿Que etiquetas debe tener al menos un programa de HTML?</h3>
+        <input type="radio" name="r3" id="r3" value="5"/>Html, body y cierre de body y html <br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Html, body, cierre de body y title<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Html, body, cierre de body <br/>
+        <input type="radio" name="r3" id="r3" value="0"/>Html, title, body y cierre de title <br/>
+
+        <br>
+        <li class="preg">Pregunta 4</li>
+        <h3 class="preg2" >¿Cual es el atributo para insertar una imagen de fondo en la etiqueta body?</h3>
+        <input type="radio" name="r4" id="r4" value="0"/>width<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>cellspacing<br/>
+        <input type="radio" name="r4" id="r4" value="5"/>background<br/>
+        <input type="radio" name="r4" id="r4" value="0"/>bgcolor<br/>
+
+        <br>
+        <li class="preg">Pregunta 5</li>
+        <h3 class="preg2" >Para modificar el fondo de la página y poner un color, dentro de la etiqueta body, empleamos el atributo:</h3>
+        <input type="radio" name="r3" id="r3" value="0"/>background="foto.jpg"<br/>
+        <input type="radio" name="r3" id="r3" value="5"/>body="color green"<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>bgcolor="green"<br/>
+        <input type="radio" name="r3" id="r3" value="0"/>html backcolor="green"<br/>
+    </ul>
+   
+</div>
+<input  type="button" value="Calificar" onclick="califica()"><!-- se agrega el tipo que es un buton y lo que evalua que es la calificacion de cada pregunta y se agrega el onclic para hacer dicha operacionk -->
+</form>
+<p></p><!-- etiqueta para parrafos -->
+<p id="total">   </p><!--imprime el total de puntos gracias a la funcion de script con el id total -->
+<p id="comentario" >   </p><!--con el id de comentario hace el comentario dependiendo los puntos, con la funcion de script -->
+<iframe frameborder="0" width="600" height="500"></iframe><!--para el grosor,estilo y anchura  -->
+</div>
+</body>
+</html>

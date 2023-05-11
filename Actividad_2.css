@@ -1,0 +1,21 @@
+body{
+
+    background-color: #5dd6f5;
+
+}
+
+
+.preg2 {
+    font-family: sans-serif;
+    color: rgb(255, 145, 0);
+    margin-left: 10px;
+}
+
+.preg{
+    font-family: sans-serif;
+    margin-right: 100px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    color: rgb(247, 7, 7);
+    line-height: 20px;
+}
