@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <title></title>
+    <script>
+      function verificarCumple() {
+      var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+      var fechaActual = new Date();
+      var cumpleanios = new Date(fechaNacimiento);
+      
+      // Establece el año del cumpleaños como el año actual
+      cumpleanios.setFullYear(fechaActual.getFullYear());
+      
+      // Comprueba si hoy es el cumpleaños
+      if (cumpleanios.toDateString() === fechaActual.toDateString()) {
+        document.getElementById("resultado").innerHTML = "Felicidades, obtuviste 2*1.";
+      } else {
+        document.getElementById("resultado").innerHTML = "No obtuviste descuento, suerte para la proxima!.";
+      }
+    }
+    </script>
+  </head>
+  <body>
+
+    <h1>Puedes obtener un producto gratis!</h1>
+    <label for="Nombre">Nombre</label> <br/>
+    <input type="text" placeholder="Nombre"
+    maxlength="12" name="Nombre" id="Nombre" /><br/><br/>
+    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="fechaNacimiento"><br/><br/>
+    <button class="Enviar" onclick="verificarCumple()">Enviar</button>
+    <div id="resultado"></div>
+
+    <style>
+    .Enviar {
+        background-color: #fa7bc5; 
+        color: rgb(255, 255, 255); 
+        padding: 10px 40px; 
+        font-size: 16px; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+      }
+  
+    
+    </style>
+
+
+</body>
+</html>
